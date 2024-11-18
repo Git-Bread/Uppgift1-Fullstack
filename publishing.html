@@ -57,8 +57,8 @@
                             <h3>Uppladdnings Arbetsättet</h3>
                             <p>För statiska webbplatser såsom dessa så loggar man in på sitt konto eller genom sitt github/google eller liknande. Varefter man väljer New -> Static Site för att skapa en statisk webbplats.
                                 Sedan så får man välja ett Git-Repo, antingen eget eller publikt, som kommer att dupliceras till Render som sedan kör det åt dig. I detta fall Så väljs det egna repot "Uppgift1-Fullstack".</p>
-                            <p><br>Varefter man får välja branch, root, build command och publish directory. Dessutom så kan man deklarera enviroment variables, ifall men inte vill ha dessa i en lös fil. I detta fall så krävs inget build kommando eller liknande
-                                då ingen kompilator eller liknande används. När man är klar med inställningarna så klickar man helt enkelt deploy. <br><br>Därefter försöker Render hosta webbplatsen, och varje gång githuben uppdateras så uppdaterar den och startar om webbplatsen.
+                            <p><br>Varefter man får välja branch, root, build command och publish directory. Dessutom så kan man deklarera enviroment variables, ifall men inte vill ha dessa i en lös fil. För att publisera sidan behövs
+                                så behövs däremot en build directory, vilket inte finns i denna uppgift, men detta kan bypassas genom enviroment variabeln SKIP_INSTALL_DEPS=true.
                             </p>
                         </li>
                     </ul>
