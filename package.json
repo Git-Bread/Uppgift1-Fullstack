@@ -1,0 +1,14 @@
+{
+  "name": "uppgift1-fullstack",
+  "version": "1.0.0",
+  "description": "uppgift1-fullstack",
+  "source": "index.html",
+  "scripts": {
+    "build": "parcel"
+  },
+  "author": "Max Gagner (maga2101)",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.13.0"
+  }
+}
