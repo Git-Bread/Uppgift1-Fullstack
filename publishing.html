@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Publishing</title>
+        <title>Render</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/normalcss.css">
     </head>
     <body>
         <header id="nav">
-            <h1>Uppgift-1 Publishing</h1>
+            <h1>Uppgift-1 Render</h1>
             <nav>
                 <h2><a href="index.html">Hem</a></h2>
                 <h2><a href="framework1.html">Bulma</a></h2>
@@ -25,29 +25,43 @@
                 </div>
             </div>
         </header>
-        <main>
-            <section id="about">
-                <h2>Om Uppgiften:</h2>
+        <main style="display: block;">
+            <section id="infoBlock" style="margin: auto; max-width: 40em;">
+                <h2>Om Render:</h2>
                 <div>
-                    <p>I denna uppgift ska du utvärdera (minst) två stycken CSS-ramverk, och med dessa skapa en sammanhängande webbplats.</p>
-                    <ul>
-                        <li>Du ska använda CSS-ramverken för respektive undersida, så slutresultatet blir en (1) sammanhängande webbplats, som då innehåller olika ramverk för respektive undersida.</li>
-                        <li>Webbplatsen ska fungera väl på stor som liten skärm, och ha en väl fungerade navigering mellan webbplatsens olika undersidor (gör inget att navigeringen ser olika ut beroende på undersida / ramverk).</li>
-                        <li>Webbplatsen ska dra nytta av de funktioner som finns i respektive ramverk, och webbplatsens olika delar (inklusive tabeller, formulär, knappar med mera) ska stylas av ramverken.</li>
+                    <p>Render är den webbtjänst jag använder för att ladda upp denna webbplats, varför Render? Jo för det är enkelt att använda, med stor kontroll över hur uppladdningen och formateringen skes.
+                        Plus möjligheten att aktivt hålla det syncat med ett github rep och inte behöva skapa ett 149:onde konto på webben.<br><br> Jag har använt Render under majoriteten av kursen, på grund av tre anledningar
+                        Enkelt, Gratis och fungerar. Försökte först med Vercel men det sket sig och jag blev inge visare av att försöka troubleshoota det, medans Render fungerade out of the box.</p>
+                    <p><br>Dessutom så har den en väldigt
+                        minimalistsk UI som inte slösar din tid på fina grafiker eller 24 navigerings möjlighter, direkt när man loggar in så listar den alla ens webbplatser med statusn, regionen o.s.v.
+                        Har hittils aldrig haft något större problem med tjänsten, fast har inte betalat för den och den lär vara skit-dyr då det är en AWS-repacker som har modern UI.<br><br> Alright, slut på opinions delen, 
+                        dags för faktiska fördelar nakckdelar och priser.</p>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li>
+                            <h3>Pris:</h3>
+                            <p>Render har en gratisversion med majoriteten utav funktionaliteten, fast oftast segare servrar, den som används till denna uppgift. Så Gratis +. För företag och liknande så är det ett statiskt pris
+                                per användare med "rörliga" kostnader kring RAM och liknande.
+                            </p>
+                            <p>För alla priser och nivåer, o.s.v. se <a href="https://render.com/pricing">Render</a></p>
+                        </li>
+                        <li>
+                            <h3>Documentation:</h3>
+                            <p>Render erbjuder en expansiv <a href="https://docs.render.com/">dokumentation</a>, med bred information om "uppladdnings metodik" och felsökning.
+                            Uppstår ett problem eller behöver något eftersökas kan det i stort sett alltid hittas via dokumentationen.</p>
+                        </li>
+                        <li>
+                            <h3>Stöd:</h3>
+                            <p>Render kan "köra" en stor andel runtimes såsom Node, Docker, Python, Elexir, Ruby, Go, Rust, PHP och dessutom stöd för databaser såsom MySQL databaser. Databaser finns inte i gratis versionen.</p>
+                        </li>
+                        <li>
+                            <h3>Uppladdnings Arbetsättet</h3>
+                            <p>För statiska webbplatser såsom dessa så loggar man in på sitt konto eller genom sitt github/google eller liknande. Varefter man väljer New -> Static Site för att skapa en statisk webbplats.
+                                Sedan så får man välja ett Git-Repo, antingen eget eller publikt, som kommer att dupliceras till Render som sedan kör det åt dig. I detta fall Så väljs det egna repot "Uppgift1-Fullstack".</p>
+                            <p><br>Varefter man får välja branch, root, build command och publish directory. Dessutom så kan man deklarera enviroment variables, ifall men inte vill ha dessa i en lös fil. I detta fall så krävs inget build kommando eller liknande
+                                då ingen kompilator eller liknande används. När man är klar med inställningarna så klickar man helt enkelt deploy. <br><br>Därefter försöker Render hosta webbplatsen, och varje gång githuben uppdateras så uppdaterar den och startar om webbplatsen.
+                            </p>
+                        </li>
                     </ul>
-                </div>
-            </section>
-            <section>
-                <h2>Vad Uppgiften ut på:</h2>
-                <div>
-                    <p>Uppgiften går ut på att demonstrera de olika valda ramverken på deras respektive undersida.</p>
-                    <p>Varefter webbplatsen ska laddas upp på valfri webbtjänst. Webbplatsen ska vara responsivt byggt och inehålla en andel funktioner som beskrivs i "om uppgiften".</p>
-                </div>
-            </section>
-            <section>
-                <h2>Ramverken:</h2>
-                <div>
-                    <p>Till denna uppgift så har ramverken <a href="https://bulma.io/documentation/">Bulma</a> och <a href="https://get.foundation/">Foundation</a> använts. Demonstrationerna på de olika ramverken kan hittas under respektive undersida.</p>
                 </div>
             </section>
         </main>
