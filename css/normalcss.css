@@ -164,7 +164,7 @@ main section p {
   }
 }
 main section li {
-  margin-top: 0.4em;
+  margin-top: 0.2em;
 }
 @media screen and (max-width: 780px) {
   main section ul {
