@@ -9,10 +9,22 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
+    <style>
+        p {
+            max-width: 60ch;
+        }
+        main {
+            max-width: 40em;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
     <body>
         <header class="navbar is-fixed-top has-shadow">
             <div class="navbar-brand">
-                <a class="title pt-2 pl-2 mb-4">Uppgift-1 Bulma</a>
+                <a class="title pt-2 pl-2 mb-4 is-size-1-desktop">Uppgift-1 Bulma</a>
                 <a class="navbar-burger">
                     <span></span>
                     <span></span>
@@ -20,7 +32,7 @@
                     <span></span>
                 </a>
             </div>
-            <div class="navbar-menu" id="target">
+            <div class="navbar-menu is-size-3-desktop" id="target">
                 <div class="navbar-end">
                     <a class="navbar-item" href="index.html">Hem</a>
                     <a class="navbar-item" href="framework2.html">Foundation</a>
@@ -28,7 +40,7 @@
                 </div>
             </div>
         </header>
-        <main class="content box m-3">
+        <main class="content box m-3 is-size-3-desktop">
             <nav class="breadcrumb mb-2" aria-label="breadcrumbs">
                 <ul class="ml-1">
                     <li class="mt-1"><a href="index.html">Hem</a></li>
@@ -104,44 +116,44 @@
                 <form class="pl-0" onsubmit="populate(this); return false;">
                     <div class="field-body">
                         <div class="field is-narrow">
-                            <div class="control is-expanded">
+                            <div class="control is-expanded is-size-3-desktop">
                                 <label class="field-label" for="input1">Namn:</label>
                                 <div class="field-body">
-                                    <input id="input1" type="text">
+                                    <input class="is-size-4-desktop" id="input1" type="text">
                                 </div>
                             </div>
                         </div>
                         <div class="field is-narrow">
-                            <div class="control is-expanded">
+                            <div class="control is-expanded is-size-3-desktop">
                                 <label class="field-label" for="input2">Årtal:</label>
                                 <div class="field-body">
-                                    <input id="input2" type="text">
+                                    <input class="is-size-4-desktop" id="input2" type="text">
                                 </div>
                             </div>
                         </div>
                         <div class="field is-narrow">
-                            <div class="control is-expanded">
+                            <div class="control is-expanded is-size-3-desktop">
                                 <label class="field-label" for="input3">Märke:</label>
                                 <div class="field-body">
-                                    <input id="input3" type="text">
+                                    <input class="is-size-4-desktop" id="input3" type="text">
                                 </div>
                             </div>
                         </div>
                         <div class="field is-narrow">
-                            <div class="control is-expanded">
+                            <div class="control is-expanded is-size-3-desktop">
                                 <label class="field-label" for="input4">Hastighet:</label>
                                 <div class="field-body">
-                                    <input id="input4" type="number">
+                                    <input class="is-size-4-desktop" id="input4" type="number">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="field is-grouped mt-2">
                         <div class="control">
-                        <button class="button is-link" type="submit">Klar</button>
+                        <button class="button is-link is-size-4-desktop" type="submit">Klar</button>
                         </div>
                         <div class="control">
-                        <button class="button is-link is-light">Avbryt</button>
+                        <button class="button is-link is-light is-size-4-desktop">Avbryt</button>
                         </div>
                     </div>
                 </form>

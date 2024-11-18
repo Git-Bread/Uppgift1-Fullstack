@@ -4,7 +4,8 @@
   "description": "uppgift1-fullstack",
   "source": "index.html",
   "scripts": {
-    "build": "parcel build"
+    "build": "parcel build",
+    "run": "parcel"
   },
   "author": "Max Gagner (maga2101)",
   "license": "ISC",

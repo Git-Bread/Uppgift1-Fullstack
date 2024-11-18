@@ -23,104 +23,112 @@
                 </nav>
             </div>
         </header>
-        <main>
-            <section id="about">
-                <h3>Om Foundation:</h3>
-                <div>
-                    <p><a href="https://get.foundation/index.html">Foundation</a> är ett responsivt design ramverk som inehåller både css och javascript. Tyckte om det en del då det är relativt
-                    lätt vikt och inte tränger sig in så mycket på den generella designen. Den var mycket enklare än Bulma att jobba runt fast mindre kraftfull på CSS delen, mest användbar för responsiva funktioner
-                    såsom grids och formulär/tabeller. Däremot så finns det en hel databas på deras webbplats med olika html/css/javascript snippets som låter en i stort sett bygga sidan med minimal egen kod,
-                    dessa kanske är bra eller dåliga. Vet helt ärligt inte då jag valde att inte använda dem till denna sida.</p>
-                    <p>I min åsikt så ser Bulma mycket bättre ut, fast det är ett rent CSS ramverk, medans det här är mer praktiskt (i min åsikt) och skapar inte html kod som ser ut som ett arkiv
-                        (div/div/div/div). Rent funktionellt så kan detta vära "snäppet värre" men det är svårt att forma en riktig åsikt om det utan erfarenheten som krävs för att göra
-                        det bedömmandet.
-                    </p>
-                </div>
-            </section>
-            <section>
-                <h3>Tabell</h3>
-                <div class="table-scroll">
-                    <table class="hover">
-                        <thead>
-                            <th>Nummer</th>
-                            <th>Namn</th>
-                            <th>Årtal</th>
-                            <th>Märke</th>
-                            <th>Hastighet (km/h)</th>
-                        </thead>
-                        <tbody id="tableBody">
-                            <tr>
-                                <td>1</td>
-                                <td>Ferrari LaFerrari</td>
-                                <td>2015</td>
-                                <td>Ferrari</td>
-                                <td>350</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Bugatti Veyron</td>
-                                <td>2005</td>
-                                <td>Bugatti</td>
-                                <td>400</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Tesla Model S</td>
-                                <td>2020</td>
-                                <td>Tesla</td>
-                                <td>320</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Lamborghini Aventador</td>
-                                <td>2011</td>
-                                <td>Lamborghini</td>
-                                <td>350</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>McLaren P1</td>
-                                <td>2013</td>
-                                <td>McLaren</td>
-                                <td>350</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-            <section>
-                <h3>Formulär</h3>
-                <form style="float: left;" onsubmit="populate(this); return false;">
-                    <div class="grid-container">
-                      <div class="grid-x grid-padding-x">
-                        <div class="medium-4 cell">
-                            <label for="input1">Namn
-                                <input id="input1" type="text" placeholder="namn">
-                            </label>
-                        </div>
-                        <div class="medium-4 cell">
-                            <label for="input2">Årtal
-                                <input id="input2" type="text" placeholder="årtal">
-                            </label>
-                        </div>
-                        <div class="medium-4 cell">
-                            <label for="input3">Märke
-                                <input id="input3" type="text" placeholder="märke">
-                            </label>
-                        </div>
-                        <div class="medium-4 cell">
-                            <label for="input4">Hastighet
-                                <input id="input4" type="number" placeholder="hastighet">
-                            </label>
-                        </div>
-                      </div>
-                      <div class="button-group">
-                        <button class="submit success button">Klar</button>
-                        <button class="alert button">Avbryt</button>
+        <main class="grid-padding-x grid-x row">
+            <div class="columns large-5 centered large-expand">
+                <section>
+                    <h2>Om Foundation:</h2>
+                    <div>
+                        <p><a href="https://get.foundation/index.html">Foundation</a> är ett responsivt design ramverk som inehåller både css och javascript. Tyckte om det en del då det är relativt
+                        lätt vikt och inte tränger sig in så mycket på den generella designen. Den var mycket enklare än Bulma att jobba runt fast mindre kraftfull på CSS delen, mest användbar för responsiva funktioner
+                        såsom grids och formulär/tabeller.</p>
+                        <p>Däremot så finns det en hel databas på deras webbplats med olika html/css/javascript snippets som låter en i stort sett bygga sidan med minimal egen kod,
+                        dessa kanske är bra eller dåliga. Vet helt ärligt inte då jag valde att inte använda dem till denna sida.
+                        </p>
+                        <p>I min åsikt så ser Bulma mycket bättre ut, fast det är ett rent CSS ramverk, medans det här är mer praktiskt (i min åsikt) och skapar inte html kod som ser ut som ett arkiv
+                            (div/div/div/div). Rent funktionellt så kan detta vära "snäppet värre" men det är svårt att forma en riktig åsikt om det utan erfarenheten som krävs för att göra
+                            det bedömmandet.
+                        </p>
                     </div>
+                </section>
+            </div>
+            <div class="columns large-5 large-expand">
+                <section>
+                    <h2>Formulär</h2>
+                    <form onsubmit="populate(this); return false;">
+                        <div class="grid-container">
+                            <div class="grid-x grid-padding-x">
+                            <div class="medium-4 cell">
+                                <label for="input1">Namn
+                                    <input id="input1" type="text" placeholder="namn">
+                                </label>
+                            </div>
+                            <div class="medium-4 cell">
+                                <label for="input2">Årtal
+                                    <input id="input2" type="text" placeholder="årtal">
+                                </label>
+                            </div>
+                            <div class="medium-4 cell">
+                                <label for="input3">Märke
+                                    <input id="input3" type="text" placeholder="märke">
+                                </label>
+                            </div>
+                            <div class="medium-4 cell">
+                                <label for="input4">Hastighet
+                                    <input id="input4" type="number" placeholder="hastighet">
+                                </label>
+                            </div>
+                            </div>
+                            <div class="button-group large">
+                            <button class="submit success button large ">Klar</button>
+                            <button class="alert button large">Avbryt</button>
+                        </div>
+                        </div>
+                        </form>
+                </section>
+            </div>
+            <div class="columns large-5 large-expand table-scroll">
+                <section>
+                    <h2>Tabell</h2>
+                    <div>
+                        <table class="hover">
+                            <thead>
+                                <th>Nummer</th>
+                                <th>Namn</th>
+                                <th>Årtal</th>
+                                <th>Märke</th>
+                                <th>Hastighet (km/h)</th>
+                            </thead>
+                            <tbody id="tableBody">
+                                <tr>
+                                    <td>1</td>
+                                    <td>Ferrari LaFerrari</td>
+                                    <td>2015</td>
+                                    <td>Ferrari</td>
+                                    <td>350</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Bugatti Veyron</td>
+                                    <td>2005</td>
+                                    <td>Bugatti</td>
+                                    <td>400</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Tesla Model S</td>
+                                    <td>2020</td>
+                                    <td>Tesla</td>
+                                    <td>320</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Lamborghini Aventador</td>
+                                    <td>2011</td>
+                                    <td>Lamborghini</td>
+                                    <td>350</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>McLaren P1</td>
+                                    <td>2013</td>
+                                    <td>McLaren</td>
+                                    <td>350</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                  </form>
-            </section>
+                </section>
+            </div>
         </main>
         <script>
             function populate(formElement) {
