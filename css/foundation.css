@@ -1,0 +1,19 @@
+h1 {
+    margin: 0.2em;
+}
+header {
+    box-shadow: 1px 1px 1px black;
+}
+nav {
+    margin-left: 0.4em;
+}
+nav a {
+    font-size: 1.4em;
+    margin-right: 1em;
+}
+a:hover {
+    text-decoration: underline;
+}
+main {
+    margin: 1em;
+}
