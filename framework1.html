@@ -9,21 +9,6 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
-    <style>
-        p {
-            max-width: 60ch;
-        }
-        main {
-            max-width: 40em;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-        }
-        section {
-            margin: 1em;
-        }
-    </style>
     <body>
         <header class="navbar is-fixed-top has-shadow">
             <div class="navbar-brand">
@@ -35,7 +20,7 @@
                     <span></span>
                 </a>
             </div>
-            <div class="navbar-menu is-size-3-desktop" id="target">
+            <div class="navbar-menu is-size-2-desktop" id="target">
                 <div class="navbar-end">
                     <a class="navbar-item" href="index.html">Hem</a>
                     <a class="navbar-item" href="framework2.html">Foundation</a>
@@ -43,124 +28,126 @@
                 </div>
             </div>
         </header>
-        <main class="content box m-3 is-size-3-desktop">
-            <nav class="breadcrumb mb-2" aria-label="breadcrumbs">
-                <ul class="ml-1">
-                    <li class="mt-1"><a href="index.html">Hem</a></li>
-                    <li class="is-active"><a href="#">Bulma</a></li>
-                </ul>
-            </nav>
-            <section class="mb-2">
-                <h2 class="mb-2">Om Bulma:</h2>
-                <div>
-                    <p>Bulma<sup><a href="https://bulma.io/">[1]</a></sup> är ett Open-Source CSS Ramverk som erbjuder klara frontend-komponenter
-                        som enkelt kan kombineras och användes för att bygga responsive moderna webbplatser. Personligen så gillar jag de standard
-                        komponenter som ramverket erbjuder såsom menyn, navigationen o.s.v. Men är inget större fan utav hur dom har strukturerat meny
-                        hiden, själva menyn gömmer sig själv på mindre enheter för att man ska använda burger "elementet" för dessa enheter.</p>
-                    <p>vilket i sig själv är resonabelt, men burger elementet kräver javascript för att fungera i huvud taget, vilket lät onödigt jobbigt så
-                        jag valde att tvinga menyn att visa sig på mobila enheter istället, fast då har den helt bytt format och blir enkelt sagt, skitful. Det
-                        finns kanske inget bättre sett att strukturera på men är inte en entusiast för denna "approach"</p>
-                    <p>Pluspoäng dock för enkelheten i att ändra paddings, margins på de olika klasserna utan att behöva modifiera
-                        css'en, skönt när man vill göra små ändringar på element utan att behöva måtta för mycket.
-                    </p>
-                </div>
-            </section>
-            <section class="mb-2" style="overflow: auto;">
-                <h2 class="mb-2">Tabell</h2>
-                <table class="table mb-2">
-                    <thead>
-                        <th>Nummer</th>
-                        <th>Namn</th>
-                        <th>Årtal</th>
-                        <th>Märke</th>
-                        <th>Hastighet (km/h)</th>
-                    </thead>
-                    <tbody id="tableBody">
-                        <tr>
-                            <td>1</td>
-                            <td>Ferrari LaFerrari</td>
-                            <td>2015</td>
-                            <td>Ferrari</td>
-                            <td>350</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Bugatti Veyron</td>
-                            <td>2005</td>
-                            <td>Bugatti</td>
-                            <td>400</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Tesla Model S</td>
-                            <td>2020</td>
-                            <td>Tesla</td>
-                            <td>320</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Lamborghini Aventador</td>
-                            <td>2011</td>
-                            <td>Lamborghini</td>
-                            <td>350</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>McLaren P1</td>
-                            <td>2013</td>
-                            <td>McLaren</td>
-                            <td>350</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section class="container m-4">
-                <h2 class="mb-2">Formulär För Bil</h2>
-                <form class="pl-0" onsubmit="populate(this); return false;">
-                    <div class="field-body">
-                        <div class="field is-narrow">
-                            <div class="control is-expanded is-size-3-desktop">
-                                <label class="field-label" for="input1">Namn:</label>
-                                <div class="field-body">
-                                    <input class="is-size-4-desktop" id="input1" type="text">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="field is-narrow">
-                            <div class="control is-expanded is-size-3-desktop">
-                                <label class="field-label" for="input2">Årtal:</label>
-                                <div class="field-body">
-                                    <input class="is-size-4-desktop" id="input2" type="text">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="field is-narrow">
-                            <div class="control is-expanded is-size-3-desktop">
-                                <label class="field-label" for="input3">Märke:</label>
-                                <div class="field-body">
-                                    <input class="is-size-4-desktop" id="input3" type="text">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="field is-narrow">
-                            <div class="control is-expanded is-size-3-desktop">
-                                <label class="field-label" for="input4">Hastighet:</label>
-                                <div class="field-body">
-                                    <input class="is-size-4-desktop" id="input4" type="number">
-                                </div>
-                            </div>
-                        </div>
+        <main class="content m-3 is-size-3-desktop">
+            <wrapper class="container box">
+                <nav class="breadcrumb mb-2" aria-label="breadcrumbs">
+                    <ul class="ml-1">
+                        <li class="mt-1"><a href="index.html">Hem</a></li>
+                        <li class="is-active"><a href="#">Bulma</a></li>
+                    </ul>
+                </nav>
+                <section class="mb-2">
+                    <h2 class="mb-2">Om Bulma:</h2>
+                    <div>
+                        <p>Bulma<sup><a href="https://bulma.io/">[1]</a></sup> är ett Open-Source CSS Ramverk som erbjuder klara frontend-komponenter
+                            som enkelt kan kombineras och användes för att bygga responsive moderna webbplatser. Personligen så gillar jag de standard
+                            komponenter som ramverket erbjuder såsom menyn, navigationen o.s.v. Men är inget större fan utav hur dom har strukturerat meny
+                            hiden, själva menyn gömmer sig själv på mindre enheter för att man ska använda burger "elementet" för dessa enheter.</p>
+                        <p>vilket i sig själv är resonabelt, men burger elementet kräver javascript för att fungera i huvud taget, vilket lät onödigt jobbigt så
+                            jag valde att tvinga menyn att visa sig på mobila enheter istället, fast då har den helt bytt format och blir enkelt sagt, skitful. Det
+                            finns kanske inget bättre sett att strukturera på men är inte en entusiast för denna "approach"</p>
+                        <p>Pluspoäng dock för enkelheten i att ändra paddings, margins på de olika klasserna utan att behöva modifiera
+                            css'en, skönt när man vill göra små ändringar på element utan att behöva måtta för mycket.
+                        </p>
                     </div>
-                    <div class="field is-grouped mt-2">
-                        <div class="control">
-                        <button class="button is-link is-size-4-desktop" type="submit">Klar</button>
+                </section>
+                <section style="overflow: auto;">
+                    <h2 class="mt-5">Tabell</h2>
+                    <table class="table mb-2">
+                        <thead>
+                            <th>Nummer</th>
+                            <th>Namn</th>
+                            <th>Årtal</th>
+                            <th>Märke</th>
+                            <th>Hastighet (km/h)</th>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr>
+                                <td>1</td>
+                                <td>Ferrari LaFerrari</td>
+                                <td>2015</td>
+                                <td>Ferrari</td>
+                                <td>350</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Bugatti Veyron</td>
+                                <td>2005</td>
+                                <td>Bugatti</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Tesla Model S</td>
+                                <td>2020</td>
+                                <td>Tesla</td>
+                                <td>320</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Lamborghini Aventador</td>
+                                <td>2011</td>
+                                <td>Lamborghini</td>
+                                <td>350</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>McLaren P1</td>
+                                <td>2013</td>
+                                <td>McLaren</td>
+                                <td>350</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="container">
+                    <h2 class="mt-5">Formulär För Bil</h2>
+                    <form class="pl-0" onsubmit="populate(this); return false;">
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <div class="control is-expanded is-size-3-desktop">
+                                    <label class="field-label" for="input1">Namn:</label>
+                                    <div class="field-body">
+                                        <input class="is-size-4-desktop" id="input1" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-narrow">
+                                <div class="control is-expanded is-size-3-desktop">
+                                    <label class="field-label" for="input2">Årtal:</label>
+                                    <div class="field-body">
+                                        <input class="is-size-4-desktop" id="input2" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-narrow">
+                                <div class="control is-expanded is-size-3-desktop">
+                                    <label class="field-label" for="input3">Märke:</label>
+                                    <div class="field-body">
+                                        <input class="is-size-4-desktop" id="input3" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-narrow">
+                                <div class="control is-expanded is-size-3-desktop">
+                                    <label class="field-label" for="input4">Hastighet:</label>
+                                    <div class="field-body">
+                                        <input class="is-size-4-desktop" id="input4" type="number">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="control">
-                        <button class="button is-link is-light is-size-4-desktop">Avbryt</button>
+                        <div class="field is-grouped mt-2">
+                            <div class="control">
+                            <button class="button is-link is-size-4-desktop" type="submit">Klar</button>
+                            </div>
+                            <div class="control">
+                            <button class="button is-link is-light is-size-4-desktop">Avbryt</button>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </section>
+                    </form>
+                </section>
+            </wrapper>
         </main>
         <script>
             $(document).ready(function() {
